@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is a sample application for CSC 324 in Spring 2020.
+It will allow students to create a log-in account and add extra curricular events
+that they are involved in so that other members of the class can come to these events
+and support them.  
 
-Things you may want to cover:
+Author: Barbara Z. Johnson
 
-* Ruby version
+## License
 
-* System dependencies
+Creative Commons License: Attribution-ShareAlike 3.0
+See creativecommons.org for details
 
-* Configuration
+## Project Details
 
-* Database creation
+* Rails version 5.1.7
 
-* Database initialization
+* Ruby version 2.6.3 
 
-* How to run the test suite
+## Getting started
 
-* Services (job queues, cache servers, search engines, etc.)
+To get started with the app, clone the rep and then install the needed gems:
 
-* Deployment instructions
-
-* ...
+```
+$ bundle install --without production
+```
