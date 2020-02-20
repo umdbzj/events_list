@@ -11,7 +11,8 @@ class UsersController < ApplicationController
   def create
   	@user = User.new(user_params)
   	if @user.save
-  		#successful new user stored
+  		flash[:success] = "Welcome to the Events List App!"
+  		redirect_to @user
   	else
   		render 'new'
   	end
