@@ -32,6 +32,10 @@ gem 'jbuilder', '2.7.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Need jquery for drop down menus? This is from the 4th edition of Hartl
+gem 'jquery-rails', '4.3.1'
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
