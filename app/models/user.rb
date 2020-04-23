@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+	has_many :events, dependent: :destroy
 	before_save {self.email = self.email.downcase }
 	validates :name, presence: true, length: { maximum: 50 }
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -6,6 +7,11 @@ class User < ApplicationRecord
 		uniqueness: { case_sensitive: false }
 	has_secure_password
 	validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+	
+	#start of a feed of events a user has created
+	def feed
+		Event.where("user_id = ?", id)
+	end
 	
 	# Returns the hash digest of the given string
 	def User.digest(string)

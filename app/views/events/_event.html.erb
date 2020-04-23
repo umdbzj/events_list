@@ -1,0 +1,18 @@
+<li id="event-<%= event.id %>">
+	<%= link_to gravatar_for(event.user, size: 50), event.user %>
+	<span class="user"><%= link_to event.user.name, event.user %></span>
+	<span class="content"><%= event.content %>
+	
+	</span>
+	
+	<span class="timestamp">
+		<% if event.starts %>
+	 		Starts at: <%= event.starts.strftime("%B %e, %Y at %I:%M %p") %>.
+		<% end %>
+	<% if current_user?(event.user) %>
+	   <%= link_to "delete", event, method: :delete, 
+	 										  data: {confirm: "Are you sure?"} %>
+	 <% end %>
+	</span>
+	
+</li>

@@ -1,0 +1,58 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: MyText
+  starts: 2020-04-08 15:25:47
+  user: michael
+
+two:
+  content: MyText
+  starts: 2020-04-08 15:25:47
+  user: michael
+  
+orange:
+    content: "Tiger Booster Oranges Sale"
+    starts: <%= 10.minutes.ago %>
+    user: michael
+    
+tau_manifesto:
+    content: "Tau Tau Tau Sorority Barbecue"
+    starts: <%= 3.years.ago %>
+    user: michael
+    
+cat_video:
+    content: "Record videos for PALS"
+    starts: <%= 2.hours.ago %>
+    user: michael
+    
+most_recent:
+    content: "Choir concert"
+    starts: <%= Time.zone.now %>
+    user: michael
+    
+ants:
+    content: "Ant farm demonstration"
+    starts: <%= 3.days.ago %>
+    user: archer
+    
+zone: 
+    content: "Go to Lazer Zone!!"
+    starts: <%= 2.days.ago %>
+    user: archer
+    
+mother:
+    content: "Mother's day brunch"
+    starts: <%= 7.days.ago %>
+    user: lana
+    
+tulip:
+    content: "Tulip festival"
+    starts: <%= 4.days.ago %>
+    user: lana
+    
+<% 30.times do |n| %>
+event_<%= n %>:
+    content: <%= Faker::Lorem.sentence(1) %>
+    starts: <%= 42.days.ago %>
+    user: michael
+<% end %>
