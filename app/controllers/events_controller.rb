@@ -13,6 +13,18 @@ class EventsController < ApplicationController
 		end
 	end
 	
+	#trying to create a page to show (upcoming) events for all users
+	#add this method to the logged_in_user test above
+	def index
+        # get all events that happen today or in the future
+        @events = Event.paginate(page: params[:page]).where('starts > ?', DateTime.now.beginning_of_day)
+        
+		
+		#sort by date, ascending this time
+		
+		
+	end
+	
 	def destroy
 		@event.destroy
 		flash[:success] = "Event deleted"
