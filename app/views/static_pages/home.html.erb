@@ -18,16 +18,19 @@
 		</div>
 	</div>
 <% else %>
-	<div class="center jumbotron">
+	<div class="jumbotron">
 		<h1>Extra Curricular Events List</h1>
-			<p>This page should (eventually) list the extra curricular events that computer
+			<p>This site lists the extra-curricular events that computer
 			science students (and faculty)  will be participating in during the coming week,
 			including the current date. </p>
 	
-			<p>Fellow students are highly encouraged to support their colleagues by attending
+			<p>CS students are highly encouraged to support their colleagues by attending
 			these events. If you want your event listed, sign up now and create an event.</p>
+			
+			<p>Note: any posting that is offensive or harassing will be deleted at the sole
+			discretion of the site owner.  </p>
 	
-		<%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+		<center><%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %></center>
 	</div>
 <% end %>
 
